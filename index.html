@@ -13,13 +13,23 @@
             --white: #ffffff;
             --whatsapp-green: #25d366;
         }
+        
+        /* Smooth Scrolling Configuration */
+        html { 
+            scroll-behavior: smooth; 
+        }
+        
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: var(--light-bg); color: var(--text-dark); line-height: 1.6; }
-        header { background-color: var(--navy); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--gold); }
+        header { background-color: var(--navy); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
         .logo { color: var(--white); font-size: 24px; font-weight: bold; letter-spacing: 1px; }
         .logo span { color: var(--gold); }
-        .nav-links a { color: var(--white); text-decoration: none; margin-left: 20px; font-size: 15px; }
+        .nav-links a { color: var(--white); text-decoration: none; margin-left: 20px; font-size: 15px; transition: color 0.2s ease; }
         .nav-links a:hover { color: var(--gold); }
+        
+        /* Offset anchor padding to account for fixed header scroll positions */
+        section { scroll-margin-top: 80px; }
+
         .hero { background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200') no-repeat center center/cover; padding: 100px 20px; text-align: center; color: var(--white); }
         .hero h1 { font-size: 42px; margin-bottom: 15px; letter-spacing: 1px; }
         .hero h1 span { color: var(--gold); }
