@@ -12,9 +12,9 @@
             --text-dark: #333333;
             --white: #ffffff;
             --whatsapp-green: #25d366;
+            --border-color: #ccd6f6;
         }
         
-        /* Smooth Scrolling Configuration */
         html { 
             scroll-behavior: smooth; 
         }
@@ -27,7 +27,6 @@
         .nav-links a { color: var(--white); text-decoration: none; margin-left: 20px; font-size: 15px; transition: color 0.2s ease; }
         .nav-links a:hover { color: var(--gold); }
         
-        /* Offset anchor padding to account for fixed header scroll positions */
         section { scroll-margin-top: 80px; }
 
         .hero { background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200') no-repeat center center/cover; padding: 100px 20px; text-align: center; color: var(--white); }
@@ -45,6 +44,16 @@
         .card p { color: #555; font-size: 14px; margin-bottom: 15px; }
         .tag { display: inline-block; background: #e6f0fa; color: var(--navy); padding: 4px 10px; font-size: 12px; font-weight: bold; border-radius: 4px; }
         
+        /* Premium Briefing Form Styles */
+        .form-section { background-color: var(--white); padding: 60px 20px; border-top: 1px solid #e2e8f0; }
+        .form-container { max-width: 650px; margin: 0 auto; background: var(--light-bg); padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 5px solid var(--navy); }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--navy); font-size: 15px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 15px; color: var(--text-dark); outline: none; transition: border-color 0.2s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+        .form-submit-btn { width: 100%; background-color: var(--navy); color: var(--white); border: 2px solid var(--navy); padding: 14px; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background-color 0.2s, transform 0.2s; }
+        .form-submit-btn:hover { background-color: #112240; transform: translateY(-1px); }
+
         .about-section { background-color: #f8fafc; padding: 60px 20px; border-top: 1px solid #e2e8f0; }
         .about-container { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 40px; text-align: center; }
         @media(min-width: 768px) {
@@ -100,6 +109,7 @@
         <div class="logo">SHIVA<span>NEXUS</span></div>
         <nav class="nav-links">
             <a href="#services">Services</a>
+            <a href="#briefing">Project Brief</a>
             <a href="#about">About</a>
             <a href="#contact">Contact Desk</a>
         </nav>
@@ -123,6 +133,36 @@
                 <p>Flawless, structured filing for Passports, RTO processing, Government Gazette documentation, and corporate startup registrations.</p>
                 <div class="tag">Process Excellence</div>
             </div>
+        </div>
+    </section>
+
+    <!-- Project Brief Intake Form Section -->
+    <section id="briefing" class="form-section">
+        <h2 class="section-title">Initiate a Project Brief</h2>
+        <div class="form-container">
+            <form action="https://formspree.io/f/mrewolro" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name / Corporate Entity</label>
+                    <input type="text" id="name" name="name" required placeholder="e.g., Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Official Email Address</label>
+                    <input type="email" id="email" name="_replyto" required placeholder="e.g., name@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="wing">Target Operational Wing</label>
+                    <select id="wing" name="wing" required>
+                        <option value="" disabled selected>Select an option...</option>
+                        <option value="Corporate Strategy">Corporate Strategy Wing (Pitch Decks, Business Plans, Resumes)</option>
+                        <option value="Digital Compliance">Digital Compliance Wing (Passports, RTO, Gazette, Registrations)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Project Requirements & Scope</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Outline your project scope, targets, or specific filing assistance required..."></textarea>
+                </div>
+                <button type="submit" class="form-submit-btn">Submit Brief to Desk</button>
+            </form>
         </div>
     </section>
 
