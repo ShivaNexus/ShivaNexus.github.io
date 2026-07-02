@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShivaNexus | Corporate Advisory & Digital Desk</title>
+    <style>
+        :root {
+            --navy: #0a192f;
+            --gold: #d4af37;
+            --light-bg: #f4f6f9;
+            --text-dark: #333333;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--light-bg); color: var(--text-dark); line-height: 1.6; }
+        header { background-color: var(--navy); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--gold); }
+        .logo { color: var(--white); font-size: 24px; font-weight: bold; letter-spacing: 1px; }
+        .logo span { color: var(--gold); }
+        .nav-links a { color: var(--white); text-decoration: none; margin-left: 20px; font-size: 15px; }
+        .nav-links a:hover { color: var(--gold); }
+        .hero { background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200') no-repeat center center/cover; padding: 100px 20px; text-align: center; color: var(--white); }
+        .hero h1 { font-size: 42px; margin-bottom: 15px; letter-spacing: 1px; }
+        .hero h1 span { color: var(--gold); }
+        .hero p { font-size: 18px; max-width: 600px; margin: 0 auto 30px; color: #ccd6f6; }
+        .services { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 28px; color: var(--navy); }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background-color: var(--gold); margin: 10px auto 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--navy); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); border-top-color: var(--gold); }
+        .card h3 { color: var(--navy); margin-bottom: 15px; font-size: 20px; }
+        .card p { color: #555; font-size: 14px; margin-bottom: 15px; }
+        .tag { display: inline-block; background: #e6f0fa; color: var(--navy); padding: 4px 10px; font-size: 12px; font-weight: bold; border-radius: 4px; }
+        footer { background-color: var(--navy); color: #8892b0; text-align: center; padding: 30px 20px; font-size: 14px; border-top: 1px solid #172a45; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SHIVA<span>NEXUS</span></div>
+        <nav class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact Desk</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to <span>ShivaNexus</span></h1>
+        <p>Strategic Business Architecture & High-End Documentation Frameworks.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Our Operational Wings</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Corporate Strategy Wing</h3>
+                <p>Investor-ready business plans, pitch decks, market research analysis, and premium executive resumes engineered for high-impact results.</p>
+                <div class="tag">MBA Advisory</div>
+            </div>
+            <div class="card">
+                <h3>Digital Compliance Wing</h3>
+                <p>Flawless, structured filing for Passports, RTO processing, Government Gazette documentation, and corporate startup registrations.</p>
+                <div class="tag">Process Excellence</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ShivaNexus. All Rights Reserved. | Designed for Enterprise Excellence</p>
+    </footer>
+
+</body>
+</html>
