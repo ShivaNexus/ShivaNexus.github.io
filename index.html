@@ -21,9 +21,14 @@
         
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: var(--light-bg); color: var(--text-dark); line-height: 1.6; }
-        header { background-color: var(--navy); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
-        .logo { color: var(--white); font-size: 24px; font-weight: bold; letter-spacing: 1px; }
-        .logo span { color: var(--gold); }
+        header { background-color: var(--navy); padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
+        
+        /* Premium Logo Integration Styling */
+        .logo-container { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { height: 45px; width: auto; margin-right: 12px; }
+        .logo-text { color: var(--white); font-size: 24px; font-weight: bold; letter-spacing: 1px; }
+        .logo-text span { color: var(--gold); }
+        
         .nav-links a { color: var(--white); text-decoration: none; margin-left: 20px; font-size: 15px; transition: color 0.2s ease; }
         .nav-links a:hover { color: var(--gold); }
         
@@ -44,6 +49,17 @@
         .card p { color: #555; font-size: 14px; margin-bottom: 15px; }
         .tag { display: inline-block; background: #e6f0fa; color: var(--navy); padding: 4px 10px; font-size: 12px; font-weight: bold; border-radius: 4px; }
         
+        /* New Operational Workflow Timeline Styles */
+        .workflow-section { background-color: #f8fafc; padding: 60px 20px; border-top: 1px solid #e2e8f0; }
+        .timeline { display: flex; flex-direction: column; gap: 30px; max-width: 900px; margin: 0 auto; }
+        @media(min-width: 768px) {
+            .timeline { flex-direction: row; justify-content: space-between; }
+        }
+        .timeline-step { flex: 1; background: var(--white); padding: 25px; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border-top: 3px solid var(--gold); text-align: center; position: relative; }
+        .step-number { width: 36px; height: 36px; background-color: var(--navy); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 15px; font-size: 16px; }
+        .timeline-step h3 { color: var(--navy); font-size: 18px; margin-bottom: 10px; }
+        .timeline-step p { color: #555; font-size: 14px; }
+
         /* Briefing Form Section Styles */
         .form-section { background-color: var(--white); padding: 60px 20px; border-top: 1px solid #e2e8f0; }
         .form-container { max-width: 650px; margin: 0 auto; background: var(--light-bg); padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-left: 5px solid var(--navy); }
@@ -106,9 +122,14 @@
 <body>
 
     <header>
-        <div class="logo">SHIVA<span>NEXUS</span></div>
+        <a href="#" class="logo-container">
+            <!-- If you name your logo file "logo.png" and upload it to GitHub, it will instantly display here -->
+            <img src="logo.png" alt="" class="logo-img" onerror="this.style.display='none'">
+            <div class="logo-text">SHIVA<span>NEXUS</span></div>
+        </a>
         <nav class="nav-links">
             <a href="#services">Services</a>
+            <a href="#workflow">Execution Method</a>
             <a href="#briefing">Project Brief</a>
             <a href="#about">About</a>
             <a href="#contact">Contact Desk</a>
@@ -132,6 +153,28 @@
                 <h3>Digital Compliance Wing</h3>
                 <p>Flawless, structured filing for Passports, RTO processing, Government Gazette documentation, and corporate startup registrations.</p>
                 <div class="tag">Process Excellence</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW PROCESS TIMELINE SECTION -->
+    <section id="workflow" class="workflow-section">
+        <h2 class="section-title">The Desk Operational Method</h2>
+        <div class="timeline">
+            <div class="timeline-step">
+                <div class="step-number">01</div>
+                <h3>1. Parameter Initiation</h3>
+                <p>Submit your target objective or filing bottleneck via our secure structural Project Brief portal below.</p>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">02</div>
+                <h3>2. Architecture Mapping</h3>
+                <p>Our desk isolates systemic data pathways and designs a custom execution blueprint tailored to corporate compliance thresholds.</p>
+            </div>
+            <div class="timeline-step">
+                <div class="step-number">03</div>
+                <h3>3. Flawless Execution</h3>
+                <p>Receive pristine, highly optimized final artifacts or verified filing documentation engineered to premium enterprise standards.</p>
             </div>
         </div>
     </section>
