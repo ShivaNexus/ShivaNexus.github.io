@@ -57,17 +57,17 @@
         .services { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
         .section-title { text-align: center; margin-bottom: 40px; font-size: 28px; color: var(--navy); }
         .section-title::after { content: ''; display: block; width: 60px; height: 3px; background-color: var(--gold); margin: 10px auto 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; }
-        .card { background: var(--white); padding: 35px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--navy); transition: transform 0.3s; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 30px; }
+        .card { background: var(--white); padding: 35px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--navy); transition: transform 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { transform: translateY(-5px); border-top-color: var(--gold); }
-        .card h3 { color: var(--navy); margin-bottom: 15px; font-size: 22px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; }
+        .card h3 { color: var(--navy); margin-bottom: 15px; font-size: 20px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; }
         .card p { color: #555; font-size: 14px; margin-bottom: 20px; font-style: italic; }
         
-        .service-list { list-style: none; margin-bottom: 25px; }
+        .service-list { list-style: none; margin-bottom: 25px; flex-grow: 1; }
         .service-list li { font-size: 14px; color: #4a5568; margin-bottom: 10px; display: flex; align-items: flex-start; }
         .service-list li::before { content: "✦"; color: var(--gold); margin-right: 10px; font-weight: bold; }
 
-        .tag { display: inline-block; background: #e6f0fa; color: var(--navy); padding: 4px 10px; font-size: 12px; font-weight: bold; border-radius: 4px; }
+        .tag { display: inline-block; background: #e6f0fa; color: var(--navy); padding: 4px 10px; font-size: 12px; font-weight: bold; border-radius: 4px; align-self: flex-start; }
         
         /* Operational Workflow Timeline Styles */
         .workflow-section { background-color: #f8fafc; padding: 60px 20px; border-top: 1px solid #e2e8f0; }
@@ -164,28 +164,50 @@
         <h2 class="section-title">Our Operational Wings</h2>
         <div class="grid">
             <div class="card">
-                <h3>Corporate Strategy & Marketing Wing</h3>
-                <p>Investor-ready business planning, target positioning blueprints, and tactical market architecture engineered for enterprise scaling.</p>
-                <ul class="service-list">
-                    <li>Investor-Ready Pitch Decks & Sustainable Business Models</li>
-                    <li>Go-To-Market (GTM) Strategy & Brand Positioning Frameworks</li>
-                    <li>In-Depth Competitor Intelligence & Market Gap Research Analysis</li>
-                    <li>Comprehensive Marketing Audits & Growth Funnel Optimization Models</li>
-                    <li>Premium Executive Resumes & Professional LinkedIn Architecture</li>
-                    <li>Standard Operating Procedure (SOP) Drafting & Internal Process Design</li>
-                </ul>
+                <div>
+                    <h3>Corporate Strategy & Marketing</h3>
+                    <p>Investor-ready planning, target positioning blueprints, and tactical market architecture engineered for enterprise growth.</p>
+                    <ul class="service-list">
+                        <li>Investor Pitch Decks & Sustainable Business Models</li>
+                        <li>Go-To-Market (GTM) Strategy & Brand Positioning</li>
+                        <li>Competitor Intelligence & Market Gap Research</li>
+                        <li>Marketing Audits & Conversion Funnel Optimization</li>
+                        <li>Premium Executive Resumes & LinkedIn Architecture</li>
+                        <li>SOP Drafting & Internal Workflow Architecture</li>
+                    </ul>
+                </div>
                 <div class="tag">MBA Advisory</div>
             </div>
+            
             <div class="card">
-                <h3>Digital Compliance Wing</h3>
-                <p>Flawless, data-verified filing management and structural bottleneck resolution for critical state and digital frameworks.</p>
-                <ul class="service-list">
-                    <li>Fresh Passport Applications & Re-issue Processing Frameworks</li>
-                    <li>Official Government Gazette Documentation (Name, Age, and Core Changes)</li>
-                    <li>RTO Documentation Mapping & Procedural Processing Assistance</li>
-                    <li>Corporate Startup Formations, PAN/Aadhaar Alignment, & MSME Registrations</li>
-                    <li>Digital Signature Certificate (DSC) & Director Identification Number (DIN) Processing</li>
-                </ul>
+                <div>
+                    <h3>Commercial & Financial Admin</h3>
+                    <p>Data-verified bookkeeping frameworks, spreadsheet modeling, and systematic pre-audit organization.</p>
+                    <ul class="service-list">
+                        <li>Transactional Bookkeeping & Accounts Reconciliation</li>
+                        <li>P&L Statement & Balance Sheet Framework Preparation</li>
+                        <li>Compliant Invoicing Architecture & Automated Billing Workflows</li>
+                        <li>Custom Spreadsheet Expense & Inventory Management Models</li>
+                        <li>Audit Assistance Prep & Systematic Voucher Indexing</li>
+                        <li>GST & Tax Collation Support Frameworks</li>
+                    </ul>
+                </div>
+                <div class="tag">BCom Administration</div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>Digital Compliance Wing</h3>
+                    <p>Flawless, data-verified filing management and structural bottleneck resolution for critical state and federal portals.</p>
+                    <ul class="service-list">
+                        <li>Fresh Passport Applications & Re-issue Processing</li>
+                        <li>Official Government Gazette Documentation (Name/Age Changes)</li>
+                        <li>RTO Documentation Mapping & Procedural Assistance</li>
+                        <li>Corporate Startup Formations & MSME Registrations</li>
+                        <li>Digital Signature Certificates (DSC) & DIN Processing</li>
+                        <li>Core Data Corrections & Aadhaar/PAN Alignment Support</li>
+                    </ul>
+                </div>
                 <div class="tag">Process Excellence</div>
             </div>
         </div>
@@ -228,7 +250,8 @@
                     <label for="wing">Target Operational Wing</label>
                     <select id="wing" name="wing" required>
                         <option value="" disabled selected>Select an option...</option>
-                        <option value="Corporate Strategy">Corporate Strategy Wing (Pitch Decks, Business Plans, Resumes)</option>
+                        <option value="Corporate Strategy">Corporate Strategy Wing (Pitch Decks, Business Plans, Marketing)</option>
+                        <option value="Commercial Admin">Commercial & Financial Admin (Bookkeeping, Billing, Invoicing)</option>
                         <option value="Digital Compliance">Digital Compliance Wing (Passports, RTO, Gazette, Registrations)</option>
                     </select>
                 </div>
